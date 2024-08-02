@@ -5,12 +5,12 @@ This document outlines the requirements and behavior of the user management scre
 It provides detailed information on the UI components, their functionality, and expected interactions. 
 The goal is to help developers create a user-friendly interface for managing users within an application, allowing administrators to view, create, edit, and disable users.
 
-### Requirements
-1. **View Users**: Display a list of existing users.
-2. **Add New User**: Provide a form for creating new users.
-3. **Edit User**: Allow modifications to existing users.
-4. **Enable/Disable User**: Enable or disable users.
-5. **Role Assignment**: Assign roles to users.
+### Project Requirements
+* Should exist a user table for all added users.
+* Should provide a form for creating user.
+* Should allow modifications to existing users.
+* Should enable or disable users.
+* Should assign roles to users.
 
 ### Initial View
 When the user management screen is first loaded, you should see:
@@ -23,13 +23,12 @@ When the user management screen is first loaded, you should see:
 
 #### 1. User Table
 - **Columns**: 
-  - ID
-  - User Name
-  - Email
-  - Enabled
+  | ID | User Name | Email |Enabled |
+  |----| ----------|-------|--------|
 - **Sorting**: Each column should be sortable.
 - **Rows**: Each row represents a user with their ID, username, email, and enabled status.
 - **Actions**: Clicking on a row should fill the "New User" form with the selected user's details for editing.
+- **Behavior**: Should show the new added user from database.
 
 #### 2. New User Button
 - **Location**: Top left of the screen.
@@ -52,7 +51,7 @@ When the user management screen is first loaded, you should see:
 - **Buttons**:
   - Save User: Saves the user details (for both creating and editing users).
 - **Behavior**:
-  - **Creating a New User**: Fill in the fields and click "Save User" to create a new user.
+  - **Creating a New User**: Fill in the fields and click "Save User" to create a new user.After clicking "Save User" the new user should be saved on database.
   - **Editing an Existing User**: Populate fields with the selected user's details, modify as needed, and click "Save User" to update the user.
 
 ### Example User Interaction
